@@ -1,0 +1,16 @@
+#userIcon:hover > .loginContainer{
+    display: block;
+}
+.title{
+    display: none;
+}
+.details-div{
+    display: none;
+    left: -3.5rem;
+}
+.card:hover > .title {
+    display: flex;
+}
+.card:hover > .details-div {
+    display: flex;
+}

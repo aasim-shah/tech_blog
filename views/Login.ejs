@@ -1,0 +1,43 @@
+
+    
+    <%- include('reuseables/Header.ejs') %>
+    <%- include('reuseables/Navbar.ejs') %>
+
+
+    
+    <div class="h-[87vh] w-full flex justify-center items-center">
+    <div class="w-10/12 sm:w-4/12 mx-auto">
+      <% if(messages.error){%>
+        <p class="text-black py-2 bg-red-200 text-center my-2"><%= messages.error %></p>
+        <% }  %>
+
+        <form method="post" action="/login">
+            <div class="mb-3">
+              <input type="text" required name="email" placeholder="Email " class="outline-blue-300 border-2 py-2 px-3 w-full rounded-md" >
+            </div>
+            <div class="mb-3">
+              <input name="password" pattern=".{4,16}"  title="8 or more Character" type="password" placeholder="Password " class="outline-blue-300 border-2 py-2 px-3 w-full rounded-md">
+            </div>
+            <div class="">
+              <button type="submit" class="py-1 px-3 bgThemeClr text-white rounded-sm font-bold w-full ">Login</button>
+            </div>
+          </form>
+          <div class="flex flex-row mt-3 justify-evenly">
+            <p class="text-sm text-gray-500">Already Having  Account ? </p>
+            <a href="/register" class="underline textThemeClr">Signup</a>
+        </div>
+        </div>
+    
+     
+    </div>
+
+
+
+
+    
+    <%- include('reuseables/Footer.ejs') %>
+
+
+
+
+

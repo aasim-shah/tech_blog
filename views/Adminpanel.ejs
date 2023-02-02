@@ -1,0 +1,33 @@
+
+    <%- include('reuseables/Header.ejs') %>
+    <%- include('reuseables/Navbar.ejs') %>
+
+
+
+    <% if(messages.success){%>
+        <p class="text-black w-9/12 sm:w-6/12 mx-auto py-2 bg-green-200 rounded-md text-center my-2"><%= messages.success %></p>
+  <% }  %>
+  <% if(messages.error){%>
+    <p class="text-black w-8/12 mx-auto py-2 bg-red-200 text-center my-2 rounded-md"><%= messages.error %></p>
+    <% }  %>
+
+
+<div class="w-11/12 sm:w-6/12 py-3 px-2 my-2 mx-auto bg-gray-100">
+    <div class="flex flex-row justify-between items-center">
+        <p class="text-lg">You have some thing in your mind  ? </p>
+        <a href="/article/new" class="py-1 px-3 bgThemeClr text-white font-bold rounded-md w-[7rem] text-center">Add Post</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <%- include('reuseables/Footer.ejs') %>
+
