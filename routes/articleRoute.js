@@ -1,6 +1,8 @@
 const checkAuthenticated = require('../midlewalres/authMiddleware')
 const { upload } = require('../midlewalres/multer')
 const articleModel = require('../models/articleModel')
+const moment = require('moment')
+
 
 const router = require('express').Router()
 
@@ -54,7 +56,7 @@ router.get('/view/:id' , async(req ,res) =>{
     const {id } = req.params
     const articles = await articleModel.find().sort({'createdAt' : -1}).populate('author')
     const article = await articleModel.findById(id)
-    res.render('ViewArticle' , {article , articles })
+    res.render('ViewArticle' , {article , articles  , moment : moment})
 })
 
 

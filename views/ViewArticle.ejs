@@ -24,7 +24,7 @@
                                             <div class="flex flex-col">
                                                 <span class="font-semibold text-lg"> By <%= article.authorName %></span>
                                                 <span class=" text-sm ">
-                                                    <%= article.authorName %>
+                                                    <%= article.authorName %> .     <%= moment(article.createdAt).format('MMMM  DD  YYYY, h:mm:ss a'); %>
                                                 </span>
                                             </div>
 
