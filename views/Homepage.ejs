@@ -117,14 +117,14 @@
 
                                 <div class="container bg-green-200 flex flex-col">
                                     <% articles.forEach(article => {%>
-                                        <div class="flex flex-row">
-                                            <div class="w-[10rem]">
-                                                <img src="/uploads/<%= article.image %>" alt="">
+                                        <div class="flex flex-row mb-3">
+                                            <div class="w-[15rem]">
+                                               <a href="/article/view/<%= article._id %>"> <img src="/uploads/<%= article.image %>" alt=""></a>
                                             </div>
                                             <div class="flex flex-col pl-4">
-                                                <p class="text-2xl font-bold"><%= article.headline %></p>
+                                                <a href="/article/view/<%= article._id %>"> <p class="text-2xl font-bold"><%= article.headline %></p></a>
                                                 <p class="text-md "><%= article.subHeadline %></p>
-                                                <p class="text-sm"><%= article.authorName %> . <%= moment(article.createdAt).fromNow()%></p>
+                                                <p class="text-sm mt-auto"><%= article.authorName %> . <%= moment(article.createdAt).fromNow()%></p>
                                             </div>
                                         </div>
                                     <%})%>
