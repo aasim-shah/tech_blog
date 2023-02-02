@@ -22,6 +22,7 @@ const articleModel = require('./models/articleModel')
 app.use('/' , express.static(__dirname + '/public'))
 app.use('/user' , express.static(__dirname + '/public'))
 app.use('/article' , express.static(__dirname + '/public'))
+app.use('/article/view' , express.static(__dirname + '/public'))
 
 // mongoose.connect(process.env.DB_URL_LIVE).then(res=>console.log('compass db connected')).catch(err => console.log(err))
  mongoose.connect("mongodb+srv://asim:mardan@cluster0.btwlh.mongodb.net/junaid_her?retryWrites=true&w=majority").then(res=>console.log('atlass db connecteed')).catch(err => console.log(err))

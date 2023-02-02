@@ -10,7 +10,8 @@
                         <p class="text-[1.3rem] sm:text-md  font-bold">
                             <%= article.headline %>
                         </p>
-
+                        <div class="w-11/12"><img src="/uploads/<%= article.image %>" alt="asdf">
+                        </div>
                         <div class="flex flex-row mx-1 pb-5 border-b-2  justify-start mt-3 items-center">
 
                             <span class="text-sm text-gray-500 flex flex-row justify-between items-center">
@@ -40,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col  sm:w-4/12">
+            <div class="flex flex-col    sm:w-4/12">
                 <div class="flex ml-5 ">
                     <div class="border py-2 px-2 h-fit rounded-md border-green-500 my-4 w-11/12 mx-auto">
                         <p class="text-lg my-2  px-2 border-b-4 w-40 border-[#215f45fd] mx-2">Latest Articles</p>
