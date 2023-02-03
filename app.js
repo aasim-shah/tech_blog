@@ -78,7 +78,7 @@ app.get("/"   , async(req ,res) =>{
   const randomPost = await articleModel.aggregate(
       [ { $sample: { size: 1 } } ]
    )
-  const articles = await articleModel.find().sort({'createdAt' : -1}).populate('author').limit(4)
+  const articles = await articleModel.find().sort({'createdAt' : -1}).populate('author')
   if(req.user){
     return res.render('Homepage' ,{user : req.user , articles : articles , moment : moment  , randomPost:  randomPost[0]})
   }  
