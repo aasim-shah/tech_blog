@@ -119,8 +119,8 @@
                                     <p class="text-xl border-b-4 border-green-700 font-bold w-32 my-3 ml-3">Recent Posts</p>
                                     <% articles.forEach(article => {%>
                                         <div class="flex flex-row mb-3">
-                                            <div class="w-[15rem]">
-                                               <a href="/article/view/<%= article._id %>"> <img src="/uploads/<%= article.image %>"  class="w-[10rem[" alt=""></a>
+                                            <div class="max-w-[15rem]">
+                                               <a href="/article/view/<%= article._id %>"> <img src="/uploads/<%= article.image %>"  class="w-[9rem] sm:w-[12rem]" alt=""></a>
                                             </div>
                                             <div class="flex flex-col pl-4">
                                                 <a href="/article/view/<%= article._id %>"> <p class="text-sm sm:text-2xl font-bold"><%= article.headline %></p></a>
