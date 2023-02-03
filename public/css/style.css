@@ -14,3 +14,15 @@
 .card:hover > .details-div {
     display: flex;
 }
+
+#menuOnPhone{
+    display: none;
+    position: absolute;
+    left: 0px;
+    z-index: 5;
+    width: 100%;
+
+    top: 0px;
+    height: 100vh;
+    background: rgba(140, 137, 137, 0.892);
+}
