@@ -24,7 +24,10 @@ blocks.forEach((block) => {
    button.addEventListener("click", async () => {
        await copyCode(block);
        button.innerText = copyButtonLabel;
-       
+       setTimeout(() => {
+        
+         button.innerText = 'copy';
+       }, 2000);
        button.style.color="white";
    });
  }
